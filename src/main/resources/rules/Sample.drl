@@ -1,0 +1,23 @@
+package com.sample
+ 
+import com.oaknorth.drool_rest.models.Employee;
+
+rule "Set Employee Salary and Designation for experience less than 3"  no-loop true
+    when
+        e : Employee( experience < 3.0, name : firstName )
+    then
+        System.out.println( "Name is : " + name );
+        e.setDesignation( "Software Engineer" );
+        e.setSalary(30000.00);
+        update(e);
+end
+ 
+rule "Set Employee Salary and Designation for experience greater than 3" no-loop true
+    when
+        e : Employee( experience >= 3.0, name : firstName )
+    then
+        System.out.println( "Name is : " + name );
+        e.setDesignation( "Senior Software Engineer" );
+        e.setSalary(50000.00);
+        update(e);
+end
