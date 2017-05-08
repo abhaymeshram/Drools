@@ -30,7 +30,7 @@ Rules Response :
   "experience": 2.9
 }
 
-2) Body for experience less than 3 ## please check the value of experience, designation and salary ##
+2) Body for experience greater than 3 ## please check the value of experience, designation and salary ##
 
 {
   "id": 10,
