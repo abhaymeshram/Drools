@@ -1,7 +1,7 @@
 //created on: May 3, 2017
 package com.drl
 
-import com.oaknorth.drool_rest.models.Employee
+import com.cis.drool_rest.models.Employee
 
 	 /*
 	 *agenda-group: It defines the group of rules that needs to be fired. To activate this you need to write "agenda-group #AGENDA_GROUP_NAME#" in .drl file and kieSession.getAgenda().getAgendaGroup(#GROUP_NAME#").setFocus() in java code.

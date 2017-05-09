@@ -1,4 +1,4 @@
-package com.oaknorth.drool_rest.controller;
+package com.cis.drool_rest.controller;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.oaknorth.drool_rest.services.RulesService;
+import com.cis.drool_rest.services.RulesService;
 
 @Controller
 public class HomeController {

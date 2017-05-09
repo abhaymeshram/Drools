@@ -1,4 +1,4 @@
-package com.oaknorth.drool_rest.models;
+package com.cis.drool_rest.models;
 
 import java.time.LocalDate;
 

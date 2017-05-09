@@ -1,6 +1,6 @@
 package com.sample
  
-import com.oaknorth.drool_rest.models.Employee;
+import com.cis.drool_rest.models.Employee;
 
 rule "Set Employee Salary and Designation for experience less than 3"  no-loop true
     when

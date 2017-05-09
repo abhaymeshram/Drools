@@ -1,4 +1,4 @@
-package com.oaknorth.bpm.client;
+package com.cis.bpm.client;
 
 
 import java.util.HashMap;

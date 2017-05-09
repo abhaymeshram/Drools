@@ -1,0 +1,25 @@
+package com.cis.rules
+
+import com.cis.drool_rest.models.FeeDataModel;
+
+
+rule "RActiveFee"
+    when
+        fee : FeeDataModel( active == "true" && feeStatus == 3)
+    then
+    	fee.setRactiveFee(1);
+end
+
+rule "RConditionalFee" extends "RActiveFee"
+    when
+        FeeDataModel( conditional == "true")
+    then
+    	fee.setrConditionalFee(1);
+end
+
+rule "RFeeCanBeApplied" extends "RConditionalFee"
+    when
+        FeeDataModel( conditionDesc  != "")
+    then
+    	fee.setrFeeCanBeApplied(1);
+end

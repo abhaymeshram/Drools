@@ -1,4 +1,4 @@
-package com.oaknorth.drool_rest.drools;
+package com.cis.drool_rest.drools;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -13,8 +13,8 @@ import org.kie.api.builder.Results;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
-import com.oaknorth.drool_rest.models.Employee;
-import com.oaknorth.drool_rest.utils.TrackingAgendaEventListener;
+import com.cis.drool_rest.models.Employee;
+import com.cis.drool_rest.utils.TrackingAgendaEventListener;
 
 /*
  * put sample.drl file in any location and put that location name against drlFileLocation

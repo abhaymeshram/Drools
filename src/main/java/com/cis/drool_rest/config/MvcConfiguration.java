@@ -1,4 +1,4 @@
-package com.oaknorth.drool_rest.config;
+package com.cis.drool_rest.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
