@@ -18,18 +18,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class BPMNRestCall {
 	public static void main(String[] args) throws JsonProcessingException {
-		//http://localhost:8080/business-central/rest/runtime/cox:Test:1.2/process/Test.test/start?authMethod=basic&authUsername=admin&authPassword=Admin@123
-		//http://localhost:8080/business-central/rest/runtime/cox:Test:1.2/process/Test.test/start?authMethod=basic&authUsername=admin&authPassword=Admin@123
-
+		//http://localhost:8080/business-central/rest/runtime/cox:Test:1.2/process/Test.test/start
 		String base_url = "http://localhost:8080/business-central/rest/runtime/";
 		String deployementID = "cox:Test:1.6";
 		String processDefID = "Test.test";
 		String username = "admin";
 		String password = "Admin@123";
 		String url = base_url+deployementID+"/process/"+processDefID+"/start";
-		//Map<String, String> params = new HashMap<String, String>();
-		//params.put("map_name", "first.last@example.com");
-		
 		String plainCreds = username + ":" + password;
 		byte[] plainCredsBytes = plainCreds.getBytes();
 		byte[] base64CredsBytes = Base64.encodeBase64(plainCredsBytes);
@@ -49,8 +44,6 @@ public class BPMNRestCall {
 		ObjectMapper obj = new ObjectMapper();
 		body.add("map_name", obj.writeValueAsString(data));
 		
-		
-		
 //		body.add("map_name", "Abhay12");
 
 		System.out.println(body);
@@ -66,7 +59,6 @@ public class BPMNRestCall {
 		
 		System.out.println(s.getBody());
 		
-//		Object ob = rs.postForObject(url, "", Object.class);
 	}
 
 }

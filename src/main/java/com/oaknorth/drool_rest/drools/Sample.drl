@@ -1,0 +1,33 @@
+//created on: May 3, 2017
+package com.drl
+
+import com.oaknorth.drool_rest.models.Employee
+
+	 /*
+	 *agenda-group: It defines the group of rules that needs to be fired. To activate this you need to write "agenda-group #AGENDA_GROUP_NAME#" in .drl file and kieSession.getAgenda().getAgendaGroup(#GROUP_NAME#").setFocus() in java code.
+	 *activation-group: It defines only one rule from the same activation group that needs to be fired. To activate this you need to write activation-group #ACTIVATION_GROUP_NAME# in .drl file 
+	 *lock-on-active: It is used to not activate the same rule that has been fired before, through out the session. No other rules will fire it.
+	 *no-loop: It is used to not activate the same rule that has already been fired before in the same when condition. But other rules can still fire it.
+	 *salience: It is used to give priorith to the rules. Higher the value higher the priority.	
+	 */ 
+
+rule "EmployeeName" agenda-group "ag1" activation-group "A1" no-loop true salience 20
+lock-on-active true
+	when
+       e1:Employee(firstName == "Abhay")
+    then
+       	e1.setDesignation("SE");
+		System.out.println("In DRL Rule 1");
+		update(e1);
+  end
+  
+  
+  rule "EmployeeActive" agenda-group "ag1" activation-group "A1" no-loop true salience 40
+  lock-on-active true
+	when
+       e1:Employee(active)
+    then
+       	e1.setDesignation("SSE");
+		System.out.println("In DRL Rule 2");
+		update(e1);
+  end

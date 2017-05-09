@@ -17,8 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class SignalRestCall {
 	public static void main(String[] args) throws JsonProcessingException {
-		//http://localhost:8080/business-central/rest/runtime/cox:Test:1.2/process/Test.test/start?authMethod=basic&authUsername=admin&authPassword=Admin@123
-		//http://localhost:8080/business-central/rest/runtime/cox:Test:1.2/process/Test.test/start?authMethod=basic&authUsername=admin&authPassword=Admin@123
+		//http://localhost:8080/business-central/rest/runtime/cox:Test:1.6/signal?signal=SIGNAL_INPUT
 
 		String base_url = "http://localhost:8080/business-central/rest/runtime/cox:Test:1.6/signal?signal=SIGNAL_INPUT";
 		String username = "admin";
