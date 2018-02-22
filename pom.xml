@@ -134,7 +134,7 @@
 	</repositories>
 
 	<build>
-		<finalName>drool-rest</finalName>
+		<finalName>ROOT</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
