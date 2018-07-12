@@ -1,0 +1,16 @@
+import org.springframework.http.client.support.BasicAuthorizationInterceptor;
+import org.springframework.web.client.RestTemplate;
+
+public class RestTemplateTest {
+	
+	public static void main(String[] args) throws Exception {
+		final String uri = "http://localhost:8080/kie-server/services/rest/server/containers";
+		
+	    RestTemplate restTemplate = new RestTemplate();
+	    restTemplate.getInterceptors().add(
+				  new BasicAuthorizationInterceptor("abhay", "abhay"));
+	    String result = restTemplate.getForObject(uri, String.class);
+	    System.out.println(result);
+	    System.out.println(Test.JsonString(result));
+	}
+}
