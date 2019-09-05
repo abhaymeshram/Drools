@@ -448,3 +448,6 @@ then
 end
 
 end template
+-- create db user
+CREATE USER 'rules'@'localhost';
+GRANT ALL PRIVILEGES ON rules.* To 'rules'@'localhost' IDENTIFIED BY 'rules';
