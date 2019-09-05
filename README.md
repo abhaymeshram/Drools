@@ -418,3 +418,33 @@ public class Customer implements Serializable{
 
 }
 
+template header
+name
+experience
+salary
+templateid
+name
+experience
+salary
+templateid
+groupName
+enabled
+order
+ruleTemplateId
+ruleName
+
+template "tow"
+
+rule "@{ruleName}"
+salience @{order}
+enabled @{enabled}
+ruleflow-group "@{groupName}"
+activation-group "@{groupName}"
+when
+	cc: com.cis.cibbpm.rules.model.Customer(experience < @{experience}, salary > @{salary}, name == "@{name}")
+then
+	System.out.println("group.... @{row.rowNumber}");
+	cc.setTemplateid("@{templateid}");
+end
+
+end template
