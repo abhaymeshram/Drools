@@ -451,3 +451,31 @@ end template
 -- create db user
 CREATE USER 'rules'@'localhost';
 GRANT ALL PRIVILEGES ON rules.* To 'rules'@'localhost' IDENTIFIED BY 'rules';
+
+
+
+Using command to fire rules
+
+{
+   "lookup":null,
+   "commands":[
+      {
+         "insert":{
+            "object":{"com.qib.creditcard.card":{"id":"","incomeType":"salaried","productType":"charge card","cardType":"gold","salary":15000.0,"grossSalary":15000.0,"primaryCardHolderAge":58,"supplementaryCardHolderAge":0,"creditLimit":0.0,"reqCreditLimit":3000.0,"reqSupCreditLimit":0.0,"mob":0,"employerType":"nonlisted","collateral":"","dbr":0.0,"overallExposure":185726.18,"returnedCheck":0,"policyRulesResult":"true","exception":"false","nationality":"expat","makerApproval":"","approverApproval":"","cadApproval":"","creditReviewApproval":"","operationsMakerApproval":"","operationsCheckerApproval":"","isSupplementary":"false","policyRulesValidationMessage":"","creditLimitMultiplier":0,"dbrPolicyValidationMsg":"","creditLimitPolicyValidationMsg":"","ovePolicyValidationMsg":"","primaryAgePolicyValidationMsg":"","salaryPolicyValidationMsg":"","supplementaryAgePolicyValidationMsg":"","returnedCheckValidation":"","reqCreditLimitValidationMsg":"","supCreditLimitValidationMsg":""}},
+            "disconnected":false,
+            "out-identifier":"com.qib.creditcard.card",
+            "return-object":true,
+            "entry-point":"DEFAULT"
+         }
+      },
+      {
+         "set-focus":"murabaha"
+      },
+      {
+         "fire-all-rules":{
+
+         }
+      }
+   ]
+}
+
